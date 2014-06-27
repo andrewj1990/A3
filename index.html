@@ -3,24 +3,51 @@
 
 <html>
 	<head>
+		<meta charset="UTF-8">
+	
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="stylesheet" href="jquery.mobile-1.4.2/jquery.mobile-1.4.2.min.css" /> 
-		<script src="jquery-2.1.1.min.js"></script>
+	<!--		<script src="jquery-2.1.1.min.js"></script> <!-->
 		<script src="jquery.mobile-1.4.2/jquery.mobile-1.4.2.min.js"></script>
+		<link rel="stylesheet" href="jquery.mobile-1.4.2/jqm-datebox.min.css">
+		<script type="text/javascript" src="jquery.mobile-1.4.2/jqm-datebox.core.min.js"></script>
+		<script type="text/javascript" src="jquery.mobile-1.4.2/jqm-datebox.mode.datebox.min"></script>
+		<link rel="stylesheet" type="text/css" href="stylesheet.css">
+		
+		<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
+		<script src="//code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
+		
+		<script>
+		$function() {
+			#( "#accordion" ).accordion();
+		});
+		</script>
 		
 	</head>
 	
 	<body>
-	
-	<div data-role="page" id="home" data-theme="c"> 
-	
-		<div data-role="header">
-			<h1>Home</h1>
-			<h1>Test</h1>
-			<h1>Hello </h1>
+		<div id="accordion">
+			<h3>Home</h3>
+			<div>
+				<p>home content</p>
+			</div>
+			<h2>Search Appointments</h2>
+			<div>
+				<p>search appointments content</p>
+			</div>
 		</div>
-		<p>hi</p>
 			
+	<!--
+	<div data-role="page" id="home" data-theme="c"> 
+		<p>hi</p>
+			<div data-role="header">
+			<div class="ui-loader-background"></div>
+			<button class="cssHomeButton" data-icon="home" href="index.html">Home</button>
+			
+			<h1>Home</h1>
+			
+		</div>
 		
 		<div data-role="main" class="ui-content">
 			<p>Page content</p>
@@ -30,7 +57,7 @@
 			<h4>2014</h4>
 		</div>
 	</div>
-	
+<!-->
 	</body>
 	
 </html>
