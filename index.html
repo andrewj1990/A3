@@ -26,40 +26,30 @@
 			<div data-role="collapsible">
 				<h3>section 2</h3>
 				<p>collapsible content for section 2</p>
+				<div id="appointmentList">
+ 
+<div data-role="collapsible">
+  <h3>Advanced Filters</h3>
+  <form name="appointmentFilterForm" id="appointmentFilterForm">
+    <label for="appointmentFilterCategory" class="select">Category</label>
+    <select name="filterCategory" id="appointmentFilterCategory"
+      onChange="populateList('appointment', 'category', this.value);">
+      <option value="all">All</option>
+      <option value="personal">Personal</option>
+      <option value="work">Work</option>
+    </select>
+    <label for="appointmentFilterAllDay">All Day?</label>
+    <input type="checkbox" name="filterAllDay"
+      id="appointmentFilterAllDay"
+      onChange="populateList('appointment', 'allDay', this.value);" />
+  </form>
+  <ul data-role="listview" data-inset="true" id="appointmentListUL"></ul>
+
+</div>
 			</div>
 		
 		</div>
-	<!--	<div id="accordion">
-			<h3>Home</h3>
-			<div>
-				<p>home content</p>
-			</div>
-			<h2>Search Appointments</h2>
-			<div>
-				<p>search appointments content</p>
-			</div>
-		</div>
-	
-	<!--
-	<div data-role="page" id="home" data-theme="c"> 
-		<p>hi</p>
-			<div data-role="header">
-			<div class="ui-loader-background"></div>
-			<button class="cssHomeButton" data-icon="home" href="index.html">Home</button>
-			
-			<h1>Home</h1>
-			
-		</div>
-		
-		<div data-role="main" class="ui-content">
-			<p>Page content</p>
-		</div>
-		
-		<div data-role="footer">
-			<h4>2014</h4>
-		</div>
-	</div>
-<!-->
+
 	</body>
 	
 </html>
