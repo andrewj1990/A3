@@ -5,7 +5,7 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		
-		<link rel="stylesheet" href="js	/jquery.mobile-1.4.2.min.css" /> 
+		<link rel="stylesheet" href="js/jquery.mobile-1.4.2.min.css" /> 
 		<link type="text/css" href="js/jqm-datebox.min.css" rel="stylesheet"/>
 		<link rel="stylesheet" type="text/css" href="stylesheet.css">
 		<link rel="stylesheet" href="//code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
@@ -20,8 +20,9 @@
 	</head>
 	
 	<body>
-		<div data-role="collapsible-set" data-iconpos="none">
-			<div data-role="collapsible" data-collapsed="false" id="col1">
+	<div data-role="page" data-theme="b">
+		<div data-role="collapsible-set" data-iconpos="none" data-theme="b" data-content-theme="b">
+			<div data-role="collapsible" data-collapsed="false" id="col1" data-theme="b">
 				<h3><center>Home</center></h3>
 				
 				<div class="section">
@@ -77,13 +78,13 @@
 				</div>
 			</div>		
 		</div>
-
+		</div>
 		<script type="text/javascript">
 			$(document).ready(function () {
 			
 				$("#col1 h3 a").click(function (event) {
 						if ($("#col1").hasClass('ui-collapsible-collapsed')) {
-							return true;	
+							return true;
 						} else return false;
 				});
 				
@@ -98,9 +99,10 @@
 							return true;	
 						} else return false;
 				});
-				
-				
+
 			});
+
+			
 		</script>
 		
 	</body>
