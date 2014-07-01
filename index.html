@@ -3,18 +3,20 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-	
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="js/jquery.mobile-1.4.2.min.css" /> 
-		<script src="jquery-2.1.1.min.js"></script>
-		<script src="js/jquery.mobile-1.4.2.min.js"></script>
-		<link rel="stylesheet" href="jquery.mobile-1.4.2/jqm-datebox.min.css">
-		<script type="text/javascript" src="js/jqm-datebox.core.min.js"></script>
-		<script type="text/javascript" src="js/jqm-datebox.mode.datebox.min"></script>
+		
+		<link rel="stylesheet" href="js	/jquery.mobile-1.4.2.min.css" /> 
+		<link type="text/css" href="js/jqm-datebox.min.css" rel="stylesheet"/>
 		<link rel="stylesheet" type="text/css" href="stylesheet.css">
 		<link rel="stylesheet" href="//code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
-		<script> $.mobile.ajaxEnabled = false </script>
 		
+		<script src="jquery-2.1.1.min.js"></script>
+		<script src="js/jquery.mobile-1.4.2.min.js"></script>
+		<script type="text/javascript" src="js/jqm-datebox.core.min.js"></script>
+		<script type="text/javascript" src="js/jqm-datebox.mode.datebox.min"></script>
+		<script type="text/javascript" src="js/jqm-datebox.mode.calbox.min.js"></script>
+
+				
 	</head>
 	
 	<body>
@@ -25,7 +27,7 @@
 					<p>collapsible content for section 1</p>
 				</div>
 			</div>
-			<div data-role="collapsible" id="col2">
+<div data-role="collapsible">
 				<h3><center>Search Appointments</center></h3>
 				<div class="section">
 					<div id="appointmentList">
@@ -44,7 +46,22 @@
 								<input type="checkbox" name="filterAllDay"
 								  id="appointmentFilterAllDay"
 								  onChange="populateList('appointment', 'allDay', this.value);" />
-								
+								  <label for="appointmentTitle" class="cssRequired">Title</label>
+								<input type="text" name="title" id="appointmentTitle"
+								  data-clear-btn="true">
+								<label for="appointmentDescription">Description</label>
+								<input type="text" name="description" id="appointmentDescription"
+								  data-clear-btn="true">
+								<label for="appointmentLocation">Location</label>
+								<input type="text" name="location" id="appointmentLocation"
+								  data-clear-btn="true">
+								<label for="mydate">Some Date</label>
+								<input name="mydate" id="mydate" type="date" data-role="datebox"
+  								 data-options='{"mode":"calbox","enablePopup":true,"useFocus":true,"useButton":false,"shadow":true}'/>
+  								 <button type="button" data-theme="e" data-icon="plus"
+ 									 onClick="doSearch('appointment');"
+  								     id="appointmentSearchButton">Search
+  								 </button>
 							  </form>
 							  <ul data-role="listview" data-inset="true" id="appointmentListUL"></ul>
 
