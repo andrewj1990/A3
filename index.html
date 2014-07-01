@@ -5,7 +5,7 @@
 		<meta charset="UTF-8">
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="js	/jquery.mobile-1.4.2.min.css" /> 
+		<link rel="stylesheet" href="js/jquery.mobile-1.4.2.min.css" /> 
 		<script src="jquery-2.1.1.min.js"></script>
 		<script src="js/jquery.mobile-1.4.2.min.js"></script>
 		<link rel="stylesheet" href="jquery.mobile-1.4.2/jqm-datebox.min.css">
@@ -13,19 +13,19 @@
 		<script type="text/javascript" src="js/jqm-datebox.mode.datebox.min"></script>
 		<link rel="stylesheet" type="text/css" href="stylesheet.css">
 		<link rel="stylesheet" href="//code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
-		
+		<script> $.mobile.ajaxEnabled = false </script>
 		
 	</head>
 	
 	<body>
-			<div data-role="collapsible-set" data-iconpos="none">
-			<div data-role="collapsible" data-collapsed="false" data-theme="c">
+		<div data-role="collapsible-set" data-iconpos="none">
+			<div data-role="collapsible" data-collapsed="false" id="col1">
 				<h3><center>Home</center></h3>
 				<div class="section">
 					<p>collapsible content for section 1</p>
 				</div>
 			</div>
-			<div data-role="collapsible">
+			<div data-role="collapsible" id="col2">
 				<h3><center>Search Appointments</center></h3>
 				<div class="section">
 					<div id="appointmentList">
@@ -51,7 +51,7 @@
 						</div>
 					</div>
 				</div>
-			<div data-role="collapsible">
+			<div data-role="collapsible" id="col3">
 				<h3><center>Check Appointments</center></h3>
 				<div class="section">
 					<p>check appointments</p>
@@ -59,6 +59,31 @@
 			</div>		
 		</div>
 
+		<script type="text/javascript">
+			$(document).ready(function () {
+			
+				$("#col1 h3 a").click(function (event) {
+						if ($("#col1").hasClass('ui-collapsible-collapsed')) {
+							return true;	
+						} else return false;
+				});
+				
+				$("#col2 h3 a").click(function (event) {
+						if ($("#col2").hasClass('ui-collapsible-collapsed')) {
+							return true;	
+						} else return false;
+				});
+				
+				$("#col3 h3 a").click(function (event) {
+						if ($("#col3").hasClass('ui-collapsible-collapsed')) {
+							return true;	
+						} else return false;
+				});
+				
+				
+			});
+		</script>
+		
 	</body>
 	
 </html>
