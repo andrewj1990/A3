@@ -1,33 +1,35 @@
 <!DOCTYPE html>
 
-
 <html>
 	<head>
 		<meta charset="UTF-8">
 	
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="stylesheet" href="jquery.mobile-1.4.2/jquery.mobile-1.4.2.min.css" /> 
-	<!--		<script src="jquery-2.1.1.min.js"></script> <!-->
-		<script src="jquery.mobile-1.4.2/jquery.mobile-1.4.2.min.js"></script>
+		<link rel="stylesheet" href="js	/jquery.mobile-1.4.2.min.css" /> 
+		<script src="jquery-2.1.1.min.js"></script>
+		<script src="js/jquery.mobile-1.4.2.min.js"></script>
 		<link rel="stylesheet" href="jquery.mobile-1.4.2/jqm-datebox.min.css">
-		<script type="text/javascript" src="jquery.mobile-1.4.2/jqm-datebox.core.min.js"></script>
-		<script type="text/javascript" src="jquery.mobile-1.4.2/jqm-datebox.mode.datebox.min"></script>
+		<script type="text/javascript" src="js/jqm-datebox.core.min.js"></script>
+		<script type="text/javascript" src="js/jqm-datebox.mode.datebox.min"></script>
 		<link rel="stylesheet" type="text/css" href="stylesheet.css">
-		
-		<script src="//code.jquery.com/jquery-1.10.2.js"></script>
 		<link rel="stylesheet" href="//code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
-		<script src="//code.jquery.com/ui/1.11.0/jquery-ui.js"></script>
 		
-		<script>
-		$function() {
-			#( "#accordion" ).accordion();
-		});
-		</script>
 		
 	</head>
 	
 	<body>
-		<div id="accordion">
+			<div data-role="collapsible-set" data-iconpos="right">
+			<div data-role="collapsible" data-collapsed="false" data-theme="c">
+				<h3>Home</h3>
+				<p>collapsible content for section 1</p>
+			</div>
+			<div data-role="collapsible">
+				<h3>section 2</h3>
+				<p>collapsible content for section 2</p>
+			</div>
+		
+		</div>
+	<!--	<div id="accordion">
 			<h3>Home</h3>
 			<div>
 				<p>home content</p>
@@ -37,7 +39,7 @@
 				<p>search appointments content</p>
 			</div>
 		</div>
-			
+	
 	<!--
 	<div data-role="page" id="home" data-theme="c"> 
 		<p>hi</p>
