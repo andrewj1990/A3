@@ -1,7 +1,17 @@
+html {
+    position: relative;
+    height: 100%;
+}
+
 
 body {
 	margin: 0;
 }
+
+.section {
+	height: 250px;
+}
+
 
 .ui-loader-background {
 	width: 100%;
