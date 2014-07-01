@@ -57,15 +57,21 @@
 								<label for="appointmentLocation">Location</label>
 								<input type="text" name="location" id="appointmentLocation"
 								  data-clear-btn="true">
-								<label for="mydate">Some Date</label>
+							
+							  	<label for="mydate">Some Date</label>
 								<input name="mydate" id="mydate" type="date" data-role="datebox"
-  								 data-options='{"mode":"calbox","enablePopup":true,"useFocus":true,"useButton":false}'/>
+  								 data-options='{"mode":"calbox","enablePopup":true,"useFocus":true,"useButton":false}'
+  								 data-overlay-theme="a" />
+								
+								
+								
   								 <button type="button" data-theme="e" data-icon="plus"
  									 onClick="doSearch('appointment');"
   								     id="appointmentSearchButton">Search
   								 </button>
+  								 
 							  </form>
-							  <ul data-role="listview" data-inset="true" id="appointmentListUL"></ul>
+
 
 							</div>
 						</div>
