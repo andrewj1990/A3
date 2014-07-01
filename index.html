@@ -18,48 +18,45 @@
 	</head>
 	
 	<body>
-			<div data-role="collapsible-set" data-iconpos="right">
+			<div data-role="collapsible-set" data-iconpos="none">
 			<div data-role="collapsible" data-collapsed="false" data-theme="c">
-				<h3>Home</h3>
-				<p>collapsible content for section 1</p>
-			</div>
-			<div data-role="collapsible">
-				<h3>section 2</h3>
-				<p>collapsible content for section 2</p>
-				<div id="appointmentList">
- 
-<div data-role="collapsible">
-  <h3>Advanced Filters</h3>
-  <form name="appointmentFilterForm" id="appointmentFilterForm">
-    <label for="appointmentFilterCategory" class="select">Category</label>
-    <select name="filterCategory" id="appointmentFilterCategory"
-      onChange="populateList('appointment', 'category', this.value);">
-      <option value="all">All</option>
-      <option value="personal">Personal</option>
-      <option value="work">Work</option>
-    </select>
-    <label for="appointmentFilterAllDay">All Day?</label>
-    <input type="checkbox" name="filterAllDay"
-      id="appointmentFilterAllDay"
-      onChange="populateList('appointment', 'allDay', this.value);" />
-  </form>
-  <ul data-role="listview" data-inset="true" id="appointmentListUL"></ul>
-
-</div>
-				<h3><center>section 2</center></h3>
+				<h3><center>Home</center></h3>
 				<div class="section">
-					<p>collapsible content for section 2</p>
+					<p>collapsible content for section 1</p>
 				</div>
 			</div>
 			<div data-role="collapsible">
-				<h3>Check Appointments</h3>
+				<h3><center>Search Appointments</center></h3>
+				<div class="section">
+					<div id="appointmentList">
+ 
+						<div data-role="collapsible">
+							<h3>Advanced Filters</h3>
+							  <form name="appointmentFilterForm" id="appointmentFilterForm">
+								<label for="appointmentFilterCategory" class="select">Category</label>
+								<select name="filterCategory" id="appointmentFilterCategory"
+								  onChange="populateList('appointment', 'category', this.value);">
+								  <option value="all">All</option>
+								  <option value="personal">Personal</option>
+								  <option value="work">Work</option>
+								</select>
+								<label for="appointmentFilterAllDay">All Day?</label>
+								<input type="checkbox" name="filterAllDay"
+								  id="appointmentFilterAllDay"
+								  onChange="populateList('appointment', 'allDay', this.value);" />
+							  </form>
+							  <ul data-role="listview" data-inset="true" id="appointmentListUL"></ul>
+
+							</div>
+						</div>
+					</div>
+				</div>
+			<div data-role="collapsible">
+				<h3><center>Check Appointments</center></h3>
 				<div class="section">
 					<p>check appointments</p>
 				</div>
-				<h3>section 2</h3>
-				<p>collapsible content for section 2</p>
-			</div>
-		
+			</div>		
 		</div>
 
 	</body>
