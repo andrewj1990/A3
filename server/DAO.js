@@ -139,7 +139,7 @@ function CLEAR_DATA(dataObj) {
 
 var user1 = new models.appointment({
 	category : "asd", title : "asd", description : "ad",
-	location : "asdsa", data : "123", allDay : "true",
+	location : "asdsa", data : "date", allDay : "true",
 	startTimeHour: "123", startTimeMinute : "123",
 	startTimeMeridiem : "asd", endTimeHour : "12",
 	endTimeMinute : "12", endTimeMeridiem : "asd"
@@ -147,8 +147,7 @@ var user1 = new models.appointment({
 
 user1.save(function(err, user1) {
 	if (err) return console.error(err);
-	console.dir(user1);
-});
+}
 
 exports.POST = POST;
 exports.GET = GET;
