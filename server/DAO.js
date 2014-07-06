@@ -3,7 +3,7 @@ var mongoose = require("mongoose");
 var schemas = {
 	appointment : mongoose.Schema({
 		category : "string", title : "string", description : "string",
-		location : "string", data : "date", allDay : "boolean",
+		location : "string", date : "date", allDay : "boolean",
 		startTimeHour: "number", startTimeMinute : "number",
 		startTimeMeridiem : "string", endTimeHour : "number",
 		endTimeMinute : "number", endTimeMeridiem : "string"
@@ -138,8 +138,8 @@ function CLEAR_DATA(dataObj) {
 }
 
 var user1 = new models.appointment({
-	category : "asd", title : "asd", description : "ad",
-	location : "asdsa", data : "date", allDay : "true",
+	category : "asdasdioqwoeqojewqoiq", title : "asd", description : "ad",
+	location : "asdsa", date : "1", allDay : "true",
 	startTimeHour: "123", startTimeMinute : "123",
 	startTimeMeridiem : "asd", endTimeHour : "12",
 	endTimeMinute : "12", endTimeMeridiem : "asd"
@@ -147,7 +147,8 @@ var user1 = new models.appointment({
 
 user1.save(function(err, user1) {
 	if (err) return console.error(err);
-}
+	console.dir(user1);
+});
 
 exports.POST = POST;
 exports.GET = GET;
