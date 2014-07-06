@@ -77,16 +77,16 @@ function serverCorePart2(dataObj) {
 		var opType = "";
 		if (dataObj.req.url.toLowerCase().indexOf("/appointment") != -1) {
 			opType = "appointment";
-		} else if (dataObj.req.url.toLowerCase().indexOf("/type") != -1) {
-			opType = "type";
+		} else if (dataObj.req.url.toLowerCase().indexOf("/note") != -1) {
+			opType = "note";
 		} else {
 			console.log(dataObj.id + ": Unsupported operation: " + dataObj.req.url);
 			completeResponse(dataObj, 403, "text", "Unsupported operation: " + dataObj.req.url);
 			return;
 		}
-		// if (opType == "clear") {
-			// DAO.CLEAR_DATA(dataObj);
-		// } else 
+		if (opType == "clear") {
+			DAO.CLEAR_DATA(dataObj);
+		} else 
 		if (dataObj.ident == null && dataObj.req.method == "GET") {
 			DAO.GET_ALL(opType, dataObj);
 		} else {
