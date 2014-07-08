@@ -2,12 +2,9 @@ var ajaxURLPrefix = null;
 var updateID = null;
 var networkAvailable = true;
 
-
 $(document).ready(function() {
 	
-	alert("hi");
-});		
-
+}
 		
 $(document).on("mobileinit", function() {
 
