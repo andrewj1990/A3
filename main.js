@@ -3,6 +3,17 @@ var updateID = null;
 var networkAvailable = true;
 
 
+$(document).ready(function(){
+	alert("hi");
+});
+
+var pageVisited = {
+    appointment : false,
+    contact : false,
+    note : false,
+    task : false
+};
+
 $(document).ready(function() {
 	
 	alert("hi");
@@ -39,6 +50,7 @@ $(document).on("ready", function() {
 	clearData();
 
 });*/
+
 
 function showConnectivityMsg(){
 
