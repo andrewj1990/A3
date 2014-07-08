@@ -9,6 +9,10 @@ var pageVisited = {
     task : false
 };
 
+$(document).ready(function () {
+	alert("hi");
+});
+
 $(document).on("mobileinit", function() {
 
 	$.mobile.defaultPageTransition = "none";
