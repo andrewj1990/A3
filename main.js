@@ -2,9 +2,23 @@ var ajaxURLPrefix = null;
 var updateID = null;
 var networkAvailable = true;
 
+<<<<<<< HEAD
 $(document).ready(function(){
 	alert("hi");
 });
+=======
+var pageVisited = {
+    appointment : false,
+    contact : false,
+    note : false,
+    task : false
+};
+
+$(document).ready(function() {
+	
+	alert("hi");
+});		
+>>>>>>> FETCH_HEAD
 
 $(document).on("mobileinit", function() {
 
