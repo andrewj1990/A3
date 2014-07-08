@@ -144,11 +144,25 @@ var user1 = new models.appointment({
 	startTimeMeridiem : "asd", endTimeHour : "12",
 	endTimeMinute : "12", endTimeMeridiem : "asd"
 });
+var user2 = new models.appointment({
+	category : "jk", title : "asd", description : "ad",
+	location : "kk", date : "1", allDay : "true",
+	startTimeHour: "123", startTimeMinute : "123",
+	startTimeMeridiem : "asd", endTimeHour : "12",
+	endTimeMinute : "12", endTimeMeridiem : "asd"
+});
+
 
 user1.save(function(err, user1) {
 	if (err) return console.error(err);
 	console.dir(user1);
 });
+
+user2.save(function(err, user1) {
+	if (err) return console.error(err);
+	console.dir(user1);
+});
+
 
 exports.POST = POST;
 exports.GET = GET;
