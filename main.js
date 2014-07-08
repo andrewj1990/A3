@@ -2,6 +2,10 @@ var ajaxURLPrefix = null;
 var updateID = null;
 var networkAvailable = true;
 
+$(document).ready(function(){
+	alert("hi");
+});
+
 $(document).on("mobileinit", function() {
 
 	$.mobile.defaultPageTransition = "none";
@@ -32,6 +36,7 @@ $(document).on("ready", function() {
 	clearData();
 
 });*/
+
 
 function showConnectivityMsg(){
 
