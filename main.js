@@ -2,18 +2,13 @@ var ajaxURLPrefix = null;
 var updateID = null;
 var networkAvailable = true;
 
-var pageVisited = {
-    appointment : false,
-    contact : false,
-    note : false,
-    task : false
-};
 
 $(document).ready(function() {
 	
 	alert("hi");
 });		
 
+		
 $(document).on("mobileinit", function() {
 
 	$.mobile.defaultPageTransition = "none";
