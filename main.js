@@ -2,10 +2,20 @@ var ajaxURLPrefix = null;
 var updateID = null;
 var networkAvailable = true;
 
+<<<<<<< HEAD
 $(document).ready(function() {
 	
 }
 		
+=======
+var pageVisited = {
+    appointment : false,
+    contact : false,
+    note : false,
+    task : false
+};
+
+>>>>>>> parent of 952b12b... js link added to html
 $(document).on("mobileinit", function() {
 
 	$.mobile.defaultPageTransition = "none";
