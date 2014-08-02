@@ -11,7 +11,7 @@
 		<link rel="stylesheet" href="//code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
 		
 		<script src="jquery-2.1.1.min.js"></script>
-		<script type="text/javascript" src="main.js"></script>
+		<script type="text/javascript" src="test.js"></script>
 		<script src="js/jquery.mobile-1.4.2.min.js"></script>
 		<script type="text/javascript" src="js/jqm-datebox.core.min.js"></script>
 		<script type="text/javascript" src="js/jqm-datebox.mode.calbox.min.js"></script>
@@ -85,7 +85,16 @@
 			<div data-role="collapsible" id="col3">
 				<h3><center>Check Appointments</center></h3>
 				<div class="section">
-					<p>check appointments</p>
+					<script>
+						$(document).delegate("#col3", "pageshow", function(inEvent) {
+							pageShowHandler("appointment");
+						});
+					</script>
+					<div>
+						
+						<ul data-role="listview" data-filter="false" data-inset="true"  data-autodividers="true" id="appointmentListUL"></ul>
+						
+					</div>
 				</div>
 			</div>		
 		</div>

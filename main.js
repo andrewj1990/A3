@@ -2,23 +2,12 @@ var ajaxURLPrefix = null;
 var updateID = null;
 var networkAvailable = true;
 
-var pageVisited = {
-    appointment : false,
-    contact : false,
-    note : false,
-    task : false
-};
-
-$(document).ready(function () {
-	alert("hi");
-});
-
 $(document).on("mobileinit", function() {
 
 	$.mobile.defaultPageTransition = "none";
 	$.mobile.defaultDialogTransition = "none";
 	$.mobile.phonegapNavigationEnable = true;
-	$.mobile.loader.prototype.options.text = "...Please Wait ...";
+	//$.mobile.loader.prototype.options.text = "...Please Wait ...";
 	$.mobile.loader.prototype.options.textVisible = true;
 	
 	if(document.location.protocol.toLowerCase().indexOf("file") != -1) {
@@ -60,7 +49,7 @@ function showConnectivityMsg(){
 
 function downloadServerData() {
  
-  $.mobile.loading("show");
+  // $.mobile.loading("show");
  
   var fetching = {
     loaded_appointment : false, 
@@ -181,11 +170,10 @@ function doSave(inType) {
   		$.mobile.changePage($("#infoDialog"), { role : "dialog" });
 	})
 	
-	{ title : "My Note", text : "My note text" }
 
 	.fail(function(inXHR, inStatus) {
   		$.mobile.loading("hide");
-  		$("#infoDialogHeader").html("Error");
+  		$("#infoDialogHeader").html("Error");	
   		$("#infoDialogContent").html(inStatus);
   		$.mobile.changePage($("#infoDialog"), { role : "dialog" });
 	});
