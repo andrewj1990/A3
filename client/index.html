@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<link rel="stylesheet" href="jquery/jquery.mobile-1.4.2.min.css" /> 
+		<link type="text/css" href="jquery/jqm-datebox.min.css" rel="stylesheet"/>
+		<link rel="stylesheet" type="text/css" href="stylesheet.css">
+		<link rel="stylesheet" href="jquery/jquery-ui.css"/>
+		
+		<script src="jquery/jquery-2.1.1.min.js"></script>
+
+		<script src="jquery/jquery.mobile-1.4.2.min.js"></script>
+		<script type="text/javascript" src="jquery/jqm-datebox.core.min.js"></script>
+		<script type="text/javascript" src="jquery/jqm-datebox.mode.calbox.min.js"></script>
+		<script type="text/javascript" src="http://dev.jtsage.com/cdn/datebox/latest/jqm-datebox.mode.datebox.min.js"></script>
+		<script type="text/javascript" src="jquery/jquery-ui.js"></script>				
+	</head>
+	
+	<body>
+		<div  data-role="header" data-position="fixed"></div>
+		<div id="page" data-role="page" data-theme="a">
+			<div data-role="collapsible-set" data-iconpos="none" data-theme="a" data-content-theme="a">
+				
+				<div data-role="collapsible" data-collapsed="false" id="col1" data-theme="a">
+				    <h3><center>Home</center></h3>
+				    
+                         <!--here is home section-->
+					<div class="section">
+					
+						<form name="login", id="login">
+							<label for="email">Username (Email)</label>
+							<input type="text" name="email" id="emailIn" data-clear-btn="true">
+							<label for="password">Password</label>
+							<input type="password" name="password" id="passwordIn" data-clear-btn="true">
+							<button type="button" data-theme="a" 
+							onClick="doLogin();">Log In</button>
+							
+								
+							<button id = "signupButton" type="button" data-theme="a"
+							onClick="signUp();">Sign Up</button>
+							<div id="dialog_signup" title="Account Registration">
+								<form>
+									<label for="firstName"> First Name </lable>
+									<input type="text" name="firstName" id="registerFirstName" data-clear-btn="true">
+									<label for="lastName"> Last Name </lable>
+									<input type="text" name="lastName" id="registerLastName" data-clear-btn="true">
+									<label for="email">Email Address</label>	
+									<input type="text" name="email" id="registerEmail" data-clear-btn="true">
+									<label for="gender">Gender</label>	
+									<select name = "gender" id="registerGender">
+										<option value = male>Male</option>
+										<option value = "female">Female</option>
+									</select>			
+									<label for="birthDate">Date of Birth</label>
+									
+									<input name="birthDate" id="registerBirthDate" type="date" data-role="datebox"
+										 data-options='{"mode":"datebox","enablePopup":true,"useFocus":true}'
+										 data-overlay-theme="a" 
+									/>
+									<label for="password">Password</label>
+									<input type="password" name="password" id="registerPassword" data-clear-btn="true">
+									<label for="confrimPassword">Confirm Password</label>
+									<input type="password" name="confrimPassword" id="confirmPassword" data-clear-btn="true">
+									<button type="button" id="registerButton" onClick="doRegisterUser()"> Register </button>
+							 
+								</form>
+							</div>	
+						</form>
+						
+						<div id="welcome">
+							<p id="welcomeText">Welcome</p>
+							
+							<button id = "logoutButton" type="button" data-theme="a" data-inline="true" data-mini="true"
+							onClick="logOut();">Log Out</button>
+							<br><br><br>
+							<u> Clinic Simple </u>
+							<p> Location: 3800 Finnerty Rd, Victoria, BC V8P 5C2  </p>
+							<p> Operation Hours: 9:00AM to 5:00PM Mon - Fri</p>
+							<p> Phone Number:</p>
+							<a href="tel:+12508888888" data-rel="external">+1(250)888-8888</a>
+							
+						</div>
+						
+						
+						
+                	</div>
+				</div>
+				<div data-role="collapsible" id="col2">
+					<h3><center>Search Appointments</center></h3>
+
+					<!--here is serch appointment section-->
+					<div class="section">
+						<form name="filterForm", id="filterForm">
+							<label for="filterDoc" class="select">Doctor</label>
+							<select name = "filterDoc" id="doctor">
+								<option value = null>All Doctors</option>
+								<option value = "Dr.Who">Dr.Who</option>
+								<option value = "Dr.Joe">Dr.Joe</option>
+							</select>
+							<label for="mydate">Date</label>
+							<input name="mydate" id="mydate" type="date" data-role="datebox"
+							 data-options='{"mode":"calbox","enablePopup":true,"useFocus":true}'
+							 data-overlay-theme="a" />
+							<button type="button" data-theme="a" data-icon="search"
+							onClick="searchAvailableApps();"
+							id="availableAppSearchButton">Search
+							</button>	
+							
+
+							<table data-role="table" data-mode="refllow" id="records_table" border="2">
+								<thead>
+									<tr>
+										<th>Doctor</th>
+										<th>Date</th>
+										<th>Time</th>
+										<th>Duration</th>
+									</tr>
+								</thead>
+								<tbody>
+								</tbody>
+							</table>
+							
+							<div id="dialog" title="Book Appointment"> 
+								<form>
+									<p id="dialog_p"></p>
+									<label>Reason</label>
+									<input id="reason_input"/>
+									<button type="button" data-theme="a"  id="BookAppointment" onclick="bookApp()">Book
+									</button>									
+								</form>
+								
+							</div>							
+							
+							
+						</form>
+					</div>
+				</div>
+						
+				<div data-role="collapsible" id="col3">
+					<h3><center>Check Appointments</center></h3>
+					<div class="section">
+					
+						<table data-role="table" data-mode="refllow" id="check_table" border="2">
+							<thead>
+								<tr>
+									<th>Doctor</th>
+									<th>Date</th>
+									<th>Time</th>
+									<th>Duration</th>
+								</tr>
+							</thead>
+							<tbody>
+							</tbody>
+						</table>	
+						
+						<div id="dialog_check" title="Appointmnet Info">
+							<p></p>
+							<button type="button" data-theme="a" id="cancel_appointment_button" onclick="cancelApp()">Cancel Appointment
+							</button>				
+						</div>
+					</div>
+				</div>		
+			</div>
+		</div>
+		<script src="main.js"></script>	
+	</body>
+	
+</html>
+

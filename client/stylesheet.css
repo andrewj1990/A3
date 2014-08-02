@@ -1,0 +1,67 @@
+html {
+    position: relative;
+    height: 100%;
+}
+
+
+body {
+	margin: 0;
+	overflow: hidden;
+	font-size: 90%;
+}
+
+#dialog {
+	display: none;
+}
+
+#dialog_check {
+	display: none;
+}
+
+.ui-widget-content {
+	background-color:white !important;
+	
+	}
+
+.section {
+	height: 310px;
+	overflow-x:hidden;
+	overflow-y: auto;
+	
+}
+
+.ui-loader-background {
+	width: 100%;
+	height: 100%;
+	left: 0px;
+	top: 0px;
+	margin: 0px;
+	background: rgba(0, 0, 0, 0.3);
+	display: none;
+	position: fixed;
+	z-index: 100;
+
+}
+
+
+.ui-loading .ui-loader-background {
+	display: block;
+}
+
+#welcomeText {
+	float:left;
+}
+
+#logoutButton {
+	float: right;
+}
+#content {
+	float: left;
+}
+#dialog_signup{
+	display: none;
+}
+
+#page{
+	margin-top: 10px;
+}

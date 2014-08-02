@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		
+		<link rel="stylesheet" href="jquery/jquery.mobile-1.4.2.min.css" /> 
+		<link type="text/css" href="jquery/jqm-datebox.min.css" rel="stylesheet"/>
+		<link rel="stylesheet" type="text/css" href="stylesheet.css">
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.11.0/themes/smoothness/jquery-ui.css">
+		
+		<script src="jquery/jquery-2.1.1.min.js"></script>
+
+		<script src="jquery/jquery.mobile-1.4.2.min.js"></script>
+		<script type="text/javascript" src="jquery/jqm-datebox.core.min.js"></script>
+		<script type="text/javascript" src="jquery/jqm-datebox.mode.calbox.min.js"></script>
+
+		<script src="main.js"></script>
+				
+	</head>
+	
+	<body>
+		<input id="clickMe" type= "button" value= "clickme" onclick = "doFunction();"/>
+		<p id = "test">hi</p>
+		<script type="text/javascript">
+
+			function doFunction(){
+				//var var1 = document.getElementByid("clickMe").value;
+				//alert('hello');
+				$.ajax({
+        				type: 'GET',
+					url: 'http://localhost:8888/findUser',
+					data: {"email": "hi"},
+ 					dataType: 'jsonp',
+       					jsonpCallback: 'callback',
+					success: function(res) {
+						alert(JSON.stringify(res));
+					},
+        				error: function(jqXHR, textStatus, errorThrown) {
+                				alert('bad');
+        				}
+				});
+				//alert('iam here');
+				/*var data = [
+  					{
+		    			"email": "hh.c",
+					"_id": "53c5e7faaafc0fbe2f1eeccf",
+					"__v": 0
+					  },
+					  {
+					    "email": "hh.c",
+					    "_id": "53c5ea85aafc0fbe2f1eecd2",
+					    "__v": 0
+					  }
+					];
+				//var data = [{"email": "0", "name": "john"},{"email": "1", "name": "Ed"}];
+				alert(JSON.stringify(data));*/
+			}			
+		</script>
+		
+	</body>
+	
+</html>
+
